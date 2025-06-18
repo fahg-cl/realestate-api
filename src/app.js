@@ -12,3 +12,11 @@ app.get('/api/inmuebles', (req, res) => {
 });
 
 module.exports = app;
+
+const PORT = process.env.PORT || 3000;
+
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Servidor escuchando en http://localhost:${PORT}`);
+  });
+}

@@ -45,3 +45,9 @@ jobs:
       - name: Reportar error
         if: failure()
         run: echo "Falla detectada en los tests para Node ${{ matrix.node }}"
+      
+      - name: Desplegar a Producción
+        run: |
+          echo "Ejecutar script o comando de despliegue aquí"
+        env:
+          API_KEY: ${{ secrets.PROD_API_KEY }}
